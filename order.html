@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>my Pizza</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   
+  
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    
+  
+    
+    
+</head>
+<body>
+<div class="button1" >    
+        <a href="index.html" class="active">Home</a>
+        </div> 
+   
+    <div class="container">
+            <h3>Order Here</h3>
+        <div class="row">
+            <div class="col-md-6">
+                <form id="new-contact">
+            <div class="form-group">
+                            <label for="new-first-name">Names</label>
+                            <input type="text" class="form-control" id="first-name" required>
+                          </div>
+         <div class="new-address">
+            <div class="form-group">
+                <label for ="new-address">Location</label>
+                     <select name="Location" class="form-control" id="location" required>
+                         <option >Kicukiro</option>
+                         <option >Gasabo</option>
+                        <option >Nyarugenge</option>
+                     </select> 
+            </div>
+         </div>
+         <div id="new-addresses">
+                <div class="new-address">
+                    <div class="form-group">
+                       <label for = "new-name">Pizza name</label>
+                           <select name="name" id ="Names" class="form-control" required>
+                            <option >Neapolitan Pizza</option>
+                            <option >New York-Style Pizza</option>
+                            <option >Sicilian Pizza</option>
+                            <option >Greek Pizza</option>
+                            <option >Chicago Pizza</option>
+                            <option >St. Louis Pizza</option>
+                            <option >Sicilian Pizza</option>
+                            <option >Detroit Pizza</option>
+                            <option >pizza margarta</option>
+                            <option >Tikka Chicken Pizza</option>
+                            <option >Hawaiian Pizza</option>
+                            <option >Vegetarian Pizza</option>
+                            <option >Pepperoni Pizza</option>
+                            <option >Italian Pizza</option>
+                            <option >Supreme Pizza</option>
+                            <option >Pizza Combo</option>
+                            <option >Meat lovers Pizza</option>
+                            <option >Mr chips Pizza</option>
+                         </select>
+                        </div>
+                    </div>
+              
+       
+          <div class="new-address">
+             <div class="form-group">
+                    <label for ="new-name1">Pizza size</label>
+                        <select name="Location" id ="size" class="form-control" required>
+                                <option >large</option>
+                                <option >medium</option>
+                                <option >small</option>
+                            </select>           
+             </div>
+    </div>
+    
+            <div class="new-address">
+                <div class="form-group">
+                    <label for ="new-name2">Pizza Crust</label>
+                        <select name="Location" id ="crust" class="form-control" required>
+                            <option >Crispy</option>
+                            <option >Stuffed</option>
+                            <option >Gluten-free</option>
+                        </select>           
+             </div>           
+      </div>
+
+  
+        <div class="new-address">
+            <div class="form-group">
+                <label for ="new-name3">Pizza Popping</label>
+                    <select name="Location" id ="popping" class="form-control" required>
+                        <option >Pepperoni</option>
+                        <option >Mushrooms</option>
+                        <option >Onions</option>
+                        <option >Sausage</option>
+                        <option >Bacon</option>
+                        <option >Extra cheese</option>
+                        <option >Black olives</option>
+                        <option >Green peppe</option>
+                     </select>           
+             </div>
+             <br>
+             <span class="btn btn-primary" id="add-pizza">Another Pizza</span>
+             <button type="submit" class="btn">Add</button>
+         </div>
+    </div>
+     <div class="row">
+          <div class="col-md-6">
+               
+                       <h2>Your Order:</h2>
+                          <ul id="contacts">
+                          </ul>
+            <div id="show-contact">
+                          <h2></h2>
+                          <p>first-name: <span class="first-name"></span></p>
+                        
+                          <p>Location: <span class="location"></span></p>
+                          <p>Pizza Name: <span class="name1"></span></p>
+                          <p>Pizza size: <span class="name2"></span></p>
+                          <p>Pizza Crust: <span class="name3"></span></p>
+                          <p>Pizza Popping: <span class="name4"></span></p>
+                          <!-- <p>Number of Pizza:</p>
+                          <p>Total Price:</p> -->
+                        </form>
+            </div>
+         </div>
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+            <script src="js/scripts.js"></script>   
+
+
+
+           
+</body>
+
+</html>
