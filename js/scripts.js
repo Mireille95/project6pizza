@@ -65,20 +65,29 @@ $(document).ready(function() {
                                 '</div>'+
                            '</div>');
     });
-
-   function Contact(one,two,three,four,five,six) {
-    this.firstName = one;
-    this.location = two; 
-    this.name= three,
-    this.size = four; 
-    this.crust= five,
-    this.popping= six; 
+  });
+   function Pizza(name,size,crust,popping) {
+    this.name= name,
+    this.size = size; 
+    this.crust= crust,
+    this.popping= popping; 
    
      }
-    Contact.prototype.fullOrder = function() {
-        return this.firstName + " " + this.location  + " " ;
+    function Pizzaa(name1,size1,crust1,popping1) {
+     
+      this.name1 = name1,
+      this.size1 = size1; 
+      this.crust1= crust1,
+      this.popping1= popping1; 
+     
+       }
+    Pizza.prototype.fullOrder = function() {
+        return this.name+ " " + this.size+ " " +this.crust+ " " +this.popping;
       }
-   
+    Pizzaa.prototype.fullOrder = function() {
+      return this.name1+ " " +this.size1+ " " +this.crust1+ " " +this.popping1;
+      }
+   $(document).ready(function(){
     $("form#new-contact").submit(function(event) {
       event.preventDefault();
   
@@ -88,30 +97,29 @@ $(document).ready(function() {
       var inputtedPizzaSize = $("select#size").val();
       var inputtedPizzaCrust = $("select#crust").val();
       var inputtedPizzaPopping = $("select#popping").val();
-      var newContact = new Contact(inputtedFirstName,inputtedLocation,inputtedPizzaName,inputtedPizzaSize,inputtedPizzaCrust,inputtedPizzaPopping);
+     
+      var newPizza = new Pizza(inputtedFirstName,inputtedLocation,inputtedPizzaName,inputtedPizzaSize,inputtedPizzaCrust,inputtedPizzaPopping);
   
-      console.log(newContact);
-    });
-    $("ul#contacts").append("<li><span class='contact'>" + newContact.fullOrder() + "</span></li>");
+      console.log(newPizza);
 
-    $(".contact").last().click(function() {
-        $("#show-contact").show();
-        $("#show-contact h2").text(newContact.firstName);
-        $(".first-name").text(newContact.firstName);
-        $(".location").text(newContact.location);
-        $(".name1").text(newContact.name);
-        $(".name2").text(newContact.size);
-        $(".name3").text(newContact.crust);
-        $(".name4").text(newContact.popping);
-      }); 
+      $("ul#contacts").append("<li><span class='contact'>" + newPizza.fullOrder() + "</span></li>");
+
+      $(".contact").last().click(function() {
+          $("#show-contact").show();
+          $(".name1").text(newPizza.name);
+          $(".name2").text(newPizza.size);
+          $(".name3").text(newPizza.crust);
+          $(".name4").text(newPizza.popping);
+        }); 
+      });
+        $("input#new-first-name").val("");
+        $("input#new-location").val(""); 
+        $("input#new-names").val(""); 
+        $("input#new-size").val(""); 
+        $("input#new-crust").val(""); 
+        $("input#new-popping").val(""); 
+      });
     
-      $("input#new-first-name").val("");
-      $("input#new-location").val(""); 
-      $("input#new-names").val(""); 
-      $("input#new-size").val(""); 
-      $("input#new-crust").val(""); 
-      $("input#new-popping").val(""); 
-    });
 
 
 //     $(".new-address").each(function() {
@@ -122,11 +130,11 @@ $(document).ready(function() {
 //         var inputtedPpopping= $(this).find("input.new-name3").val();
         
 //         var newAddress = new Address(inputtedLocation, inputtedPname, inputtedPsize,inputtedPcrust,inputtedPpopping);
-//         newContact.addresses.push(newAddress);
+//         newPizza.addresses.push(newAddress);
 //       })
 
 //       $("ul#addresses").text("");
-//         newContact.addresses.forEach(function(address) {
+//         newPizza.addresses.forEach(function(address) {
 //           $("ul#addresses").append("<li>" + address.Location + ", " + address.Pname + " " + address.Psize + " " + address.Pcrust + " " + address.Ppopping + "</li>");
 // })
 // $(document).ready(function() {
@@ -207,7 +215,7 @@ $(document).ready(function() {
   
 //       var inputtedName = $("input#new-first-name").val();
 //       var inputtedlocation = $("input#new-number").val();
-//       var newContact = new Contact(inputtedName, inputtedlocation);
+//       var newPizza = new Contact(inputtedName, inputtedlocation);
   
 //       $(".new-address").each(function() {
 //         var inputtedLocation = $(this).find("input.new-address").val();
@@ -216,18 +224,18 @@ $(document).ready(function() {
 //         var inputtedPcrust = $(this).find("input.new-name2").val();
 //         var inputtedPpopping= $(this).find("input.new-name3").val();
 //         var newAddress = new Address(inputtedLocation, inputtedPname, inputtedPsize,inputtedPcrust,inputtedPpopping);
-//         newContact.addresses.push(newAddress);
+//         newPizza.addresses.push(newAddress);
 //       });
   
 //       $(".contact").last().click(function() {
 //         $("#show-contact").show();
-//         $(".first-name").text(newContact.Name);
-//         $(".name1").text(newContact.Pname);
-//         $(".name2").text(newContact.Psize);
-//         $(".name3").text(newContact.Pcrust);
-//         $(".name4").text(newContact.Ppopping);
+//         $(".first-name").text(newPizza.Name);
+//         $(".name1").text(newPizza.Pname);
+//         $(".name2").text(newPizza.Psize);
+//         $(".name3").text(newPizza.Pcrust);
+//         $(".name4").text(newPizza.Ppopping);
 //         $("ul#addresses").text("");
-//         newContact.addresses.forEach(function(address) {
+//         newPizza.addresses.forEach(function(address) {
 //           $("ul#addresses").append("<li>" + address.Location + ", " + address.Pname + " " + address.Psize + " " + address.Pcrust + " " + address.Ppopping + "</li>");
 // })
 //       });
