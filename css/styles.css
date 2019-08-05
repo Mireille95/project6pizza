@@ -4,6 +4,7 @@
     padding:0;
      
   }
+
   header{
     background-image:linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url('/home/wecode/Documents/project6pizza/image/1.jpg');
     height:110vh;
@@ -98,3 +99,98 @@ h3{
 margin-top:5%;
 margin-left:5%;
     }
+   #show-order p{
+color:black;
+   }
+    .photo p{
+      color:black;
+    } 
+    .photo h1{
+      font-family:lato;
+      color:#000;
+      font-size:40px;
+      text-align: center
+    }
+    .photo h1:after{
+      
+      background:white;
+      display:block;
+      width:150px;
+      height:3px;
+      margin:10px auto;
+      
+    }
+    
+    .photo1, .photo2{
+      display:flex;
+      justify-content:space-between;
+      margin-left:17%;
+      margin-right:17%;
+      
+    }
+    #photos1, #photos2, #photos3,#photos4, #photos5, #photos6{
+      display:flex;
+      flex-direction:column;
+      box-shadow:6px 6px 6px orange;
+      
+    }
+    #photos1 img:hover, #photos2 img:hover, #photos3 img:hover,#photos4 img:hover, #photos5 img:hover, #photos6 img:hover{
+      opacity:0.5;
+    }
+    /* .footer{
+      background-color: black;
+     
+  } */
+  .footer h4{
+  margin-top: 3%;
+  color:black;
+  text-align: center;
+  }
+  .footer ul li{
+      display: inline-block;
+      padding:30px;
+      margin-left: 8%;
+      margin-right: 10%;
+     
+  }
+  
+  .twitter{
+      display:flex;
+      flex-direction:row;
+      font-size:20px;
+      color:grey;
+     
+      
+    }
+    .facebook{
+      display:flex;
+      flex-direction:row;
+      font-size:20px;
+      color:grey;
+    
+      
+    }
+    .instagram{
+      display:flex;
+      flex-direction:row;
+      font-size:20px;
+      color:grey;
+      
+      
+    }
+    .google{
+      display:flex;
+      flex-direction:row;
+      font-size:20px;
+      
+      color:grey;
+    }
+    .you{
+        color:grey;
+    }
+  .copyright{
+    text-align:center;
+    color:grey;
+    font-size:15px;
+}
+  
